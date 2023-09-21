@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "f5712a56-1610-4353-9819-d1ac5bf986e2",
+		"name": "assignmetsAPI's",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29900024"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9001/main/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n  \"name\": \"Sam\",\r\n  \"email\": \"sam@gmail.com\",\r\n  \"password\": \"qwert\",\r\n  \"gender\": \"male\",\r\n  \"contactNo\": \"79725233691\",\r\n  \"address\": \"pune\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9001/main/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"main",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9001/main/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"email\": \"sam@gmail.com\",\r\n\"password\": \"qwert\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9001/main/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"main",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9001/main/product?limit=5&&skip=0",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTBiNDY2ZjdhNTExYjI0ODg2YmM4YTMiLCJuYW1lIjoiU2FtIiwiZW1haWwiOiJzYW1AZ21haWwuY29tIiwiaWF0IjoxNjk1MjM3ODk0fQ.l8fhLE_PihB3ExO1_yFAOJ3ioMCqh_u8atGAYiTEnr0",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9001/main/product?limit=5&&skip=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"main",
+						"product"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "5"
+						},
+						{
+							"key": null,
+							"value": null
+						},
+						{
+							"key": "skip",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
